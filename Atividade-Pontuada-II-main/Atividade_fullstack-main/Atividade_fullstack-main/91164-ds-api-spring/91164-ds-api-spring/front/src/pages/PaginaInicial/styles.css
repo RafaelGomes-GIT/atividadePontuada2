@@ -1,0 +1,91 @@
+/* src/pages/PaginaInicial/styles.css */
+
+/* Estilo global para o fundo com imagem */
+body {
+    background-image: url('https://images.tcdn.com.br/img/img_prod/213069/bandeira_oficial_do_vitoria_128_x_90_cm_2_panos_10903_1_20190425185318.jpg'); /* Caminho para a sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Isso faz o fundo se manter fixo enquanto rola a página */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container da página inicial */
+  .home-container {
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade para destacar o conteúdo */
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+  }
+  
+  /* Imagem de logo (ajuste o tamanho conforme necessário) */
+  .home-content img.logo {
+    width: 150px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease; /* Animação suave no logo */
+  }
+  
+  .home-content img.logo:hover {
+    transform: scale(1.1); /* Efeito de aumento no logo ao passar o mouse */
+  }
+  
+  /* Estilos do título (H1) */
+  .home-content h1 {
+    color: #0033a0; /* Azul (cor principal do ECB) */
+    margin: 0;
+    font-size: 26px;
+    animation: fadeIn 2s ease-out; /* Animação de aparecimento do título */
+  }
+  
+  /* Estilos do parágrafo (p) */
+  .home-content p {
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+    animation: fadeIn 2.5s ease-out; /* Animação suave para o parágrafo */
+  }
+  
+  /* Estilos dos botões */
+  .home-content button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0033a0; /* Azul ECB */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .home-content button:hover {
+    background-color: #d11d1d; /* Vermelho ECB */
+    transform: translateY(-3px); /* Efeito de elevação no botão ao passar o mouse */
+  }
+  
+  /* Animação de aparecimento de texto */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Efeito de transição para um foco maior no botão */
+  .home-content button:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 10px rgba(0, 51, 160, 0.8); /* Adiciona um foco azul ao redor do botão */
+  }
+  
