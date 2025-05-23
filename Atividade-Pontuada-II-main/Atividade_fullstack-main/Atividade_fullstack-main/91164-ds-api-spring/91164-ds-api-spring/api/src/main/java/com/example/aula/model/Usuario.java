@@ -1,10 +1,8 @@
 package com.example.aula.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
-import org.apache.logging.log4j.message.Message;
 
 @Entity
 @Table(name = "tb_jogador")
@@ -16,20 +14,20 @@ public class Usuario {
     @NotBlank(message = "Nome é obrigatório.")
     private String nome;
 
-    @NotBlank(message = "O sexo é obrigatório.")
+    @NotNull(message = "O sexo é obrigatório.")
     @Enumerated(EnumType.STRING)
     private Sexo sexo;
 
-    @NotBlank(message = "A idade é obrigatória.")
+    @NotNull(message = "A idade é obrigatória.")
     private String idade;
 
-    @NotBlank(message = "A altura é obrigatória")
+    @NotNull(message = "A altura é obrigatória")
     private String altura;
 
-    @NotBlank(message = "Coloque o peso.")
+    @NotNull(message = "Coloque o peso.")
     private String peso;
 
-    @NotBlank(message = "Coloque a posição.")
+    @NotNull(message = "Coloque a posição.")
     private String posicao;
 
     private String numCamisa;
@@ -56,51 +54,51 @@ public class Usuario {
         this.id = id;
     }
 
-    public @NotBlank(message = "Nome é obrigatório.") String getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(@NotBlank(message = "Nome é obrigatório.") String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public @NotBlank(message = "O sexo é obrigatório.") Sexo getSexo() {
+    public Sexo getSexo() {
         return sexo;
     }
 
-    public void setSexo(@NotBlank(message = "O sexo é obrigatório.") Sexo sexo) {
+    public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
 
-    public @NotBlank(message = "A idade é obrigatória.") String getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(@NotBlank(message = "A idade é obrigatória.") String idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 
-    public @NotBlank(message = "A altura é obrigatória") String getAltura() {
+    public String getAltura() {
         return altura;
     }
 
-    public void setAltura(@NotBlank(message = "A altura é obrigatória") String altura) {
+    public void setAltura(String altura) {
         this.altura = altura;
     }
 
-    public @NotBlank(message = "Coloque o peso.") String getPeso() {
+    public String getPeso() {
         return peso;
     }
 
-    public void setPeso(@NotBlank(message = "Coloque o peso.") String peso) {
+    public void setPeso(String peso) {
         this.peso = peso;
     }
 
-    public @NotBlank(message = "Coloque a posição.") String getPosicao() {
+    public String getPosicao() {
         return posicao;
     }
 
-    public void setPosicao(@NotBlank(message = "Coloque a posição.") String posicao) {
+    public void setPosicao(String posicao) {
         this.posicao = posicao;
     }
 
@@ -112,3 +110,4 @@ public class Usuario {
         this.numCamisa = numCamisa;
     }
 }
+
